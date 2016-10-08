@@ -2,9 +2,13 @@
 
   <script type="text/javascript">
     var locations = [
-      ['Pusat Pendidikan TNI Zeni, Bogor', -6.583717, 106.796509, 4],
-      ['<center>Rindam Jaya, Jakarta <br> memiliki 3 masalah <a href="facebook.com">Klik disini</a>', -6.297438, 106.855626, 5]
+    <?php $no = 1; foreach ($logistik->result() as $value1) { ?>
+    ["Nama Kodim : <?php echo $value1->nama;?><br>", <?php echo $value1->lat;?>, <?php echo $value1->long;?>],
+    <?php $no++;  }?>
     ];
+
+
+     
 
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 6,  

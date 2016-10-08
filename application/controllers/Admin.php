@@ -25,7 +25,10 @@ class Admin extends CI_Controller {
 
 	public function permintaanlogistik()
 	{
-		$this->template->load('Template','permintaanlogistik');
+		$data = array(
+			'logistik' => $this->Model_utama->logistik()
+			);
+		$this->template->load('Template','permintaanlogistik',$data);
 	}
 
 	public function daftarfeedback()
