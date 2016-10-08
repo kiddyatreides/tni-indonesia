@@ -33,6 +33,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- Graph JavaScript -->
 <script src="<?php echo base_url()?>assets/backend/js/d3.v3.js"></script>
 <script src="<?php echo base_url()?>assets/backend/js/rickshaw.js"></script>
+<!-- akhir dari Bagian js -->
+<script src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyBIE9_0cfpD3hMSL95jhdkJ3zsLbBOiFVs" type="text/javascript"></script>
+          
 </head>
 <body>
 <div id="wrapper">
@@ -102,22 +105,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <a href="index.html"><i class="fa fa-dashboard fa-fw nav_icon"></i>Dashboard</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-laptop nav_icon"></i>Layouts<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-laptop nav_icon"></i>Logistik<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="grids.html">Grid System</a>
+                                    <a href="grids.html">Minta Logistik</a>
+                                </li>
+                                <li>
+                                    <a href="grids.html">Lihat Permintaan Logistik</a>
+                                </li>
+                                <li>
+                                    <a href="grids.html">Data Logistik</a>
+                                </li>
+                                <li>
+                                    <a href="grids.html">Laporan Logistik</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-indent nav_icon"></i>Menu Levels<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-indent nav_icon"></i>Feedback<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="graphs.html">Graphs</a>
+                            	<li>
+                                    <a href="typography.html">Tambah Feedback</a>
                                 </li>
                                 <li>
-                                    <a href="typography.html">Typography</a>
+                                    <a href="typography.html">Lihat Feedback</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-indent nav_icon"></i><span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                            	<li>
+                                    <a href="typography.html">Tambah Feedback</a>
+                                </li>
+                                <li>
+                                    <a href="typography.html">Lihat Feedback</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
