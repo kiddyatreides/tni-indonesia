@@ -1,13 +1,13 @@
-<div id="map" style="width: 1000px; height: 500px;"></div>
+<center><div id="map" style="width: 1000px; height: 500px;"></div></center>
 
   <script type="text/javascript">
     var locations = [
-      ['Bondi Beach', -33.890542, 151.274856, 4],
-      ['Coogee Beach', -33.923036, 151.259052, 5]
+      ['Pusat Pendidikan TNI Zeni, Bogor', -6.583717, 106.796509, 4],
+      ['<center>Rindam Jaya, Jakarta <br> memiliki 3 masalah <a href="facebook.com">Klik disini</a>', -6.297438, 106.855626, 5]
     ];
 
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 6,
+      zoom: 6,  
       center: new google.maps.LatLng(-6.3986603, 107.1982466),
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });

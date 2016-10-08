@@ -27,4 +27,9 @@ class Admin extends CI_Controller {
 	{
 		$this->template->load('Template','permintaanlogistik');
 	}
+
+	public function daftarfeedback()
+	{
+		$this->template->load('Template','feedback');
+	}
 }
