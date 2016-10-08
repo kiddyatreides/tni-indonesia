@@ -35,4 +35,9 @@ class Admin extends CI_Controller {
 	{
 		$this->template->load('Template','feedback');
 	}
+
+	public function permintaandetail()
+	{
+		$this->template->load('Template','permintaandetail');
+	}
 }

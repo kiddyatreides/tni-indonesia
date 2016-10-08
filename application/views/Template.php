@@ -33,6 +33,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- Graph JavaScript -->
 <script src="<?php echo base_url()?>assets/backend/js/d3.v3.js"></script>
 <script src="<?php echo base_url()?>assets/backend/js/rickshaw.js"></script>
+
+<!--datatables-->
+<script type="text/javascript" src="<?php echo base_url()?>assets/backend/DataTables/media/js/jquery.js"></script>
+<script type="text/javascript" src="<?php echo base_url()?>assets/backend/DataTables/media/js/jquery.dataTables.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/backend/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/backend/DataTables/media/css/jquery.dataTables.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/backend/DataTables/media/css/dataTables.bootstrap.css">
+
 <!-- akhir dari Bagian js -->
 <script src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyBIE9_0cfpD3hMSL95jhdkJ3zsLbBOiFVs" type="text/javascript"></script>
           
@@ -169,8 +177,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       <!-- /#page-wrapper -->
    </div>
     <!-- /#wrapper -->
+    <script type="text/javascript">
+		$(document).ready(function(){
+			$('.data').DataTable();
+		});
+	</script>
     <!-- Bootstrap Core JavaScript -->
     <script src="<?php echo base_url()?>assets/backend/js/bootstrap.min.js"></script>
 </body>
 </html>
-#datatablejquery

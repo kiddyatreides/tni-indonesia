@@ -1,9 +1,10 @@
+<div class="container"><h1>Peta Permintaan Logistik</h1></div>
 <center><div id="map" style="width: 1000px; height: 500px;"></div></center>
 
   <script type="text/javascript">
     var locations = [
     <?php $no = 1; foreach ($logistik->result() as $value1) { ?>
-    ["Nama Kodim : <?php echo $value1->nama;?><br>", <?php echo $value1->lat;?>, <?php echo $value1->long;?>],
+    ["Kodim <?php echo $value1->nama;?>, <?php echo $value1->alamat;?>. <a href='#'>Daftar Permintaan</a>", <?php echo $value1->lat;?>, <?php echo $value1->long;?>],
     <?php $no++;  }?>
     ];
 
