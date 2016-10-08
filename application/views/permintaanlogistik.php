@@ -2,14 +2,12 @@
 <center><div id="map" style="width: 1000px; height: 500px;"></div></center>
 
   <script type="text/javascript">
-    var locations = [
-    <?php $no = 1; foreach ($logistik->result() as $value1) { ?>
-    ["Kodim <?php echo $value1->nama;?>, <?php echo $value1->alamat;?>. <a href='#'>Daftar Permintaan</a>", <?php echo $value1->lat;?>, <?php echo $value1->long;?>],
-    <?php $no++;  }?>
+    var locations = 
+    [
+      <?php $no = 1; foreach ($logistik->result() as $value1) { ?>
+        ["<?php echo $value1->nama;?>, <?php echo $value1->alamat;?>. <a href='<?php echo base_url()?>admin/kodamdetail/<?php echo $value1->id_kodam?>'>Daftar Permintaan</a>", <?php echo $value1->lat;?>, <?php echo $value1->long;?>],
+      <?php $no++;  }?>
     ];
-
-
-     
 
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 6,  

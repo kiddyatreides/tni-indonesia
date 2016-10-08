@@ -22,6 +22,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="<?php echo base_url()?>assets/backend/css/font-awesome.css" rel="stylesheet"> 
 <!-- jQuery -->
 <script src="<?php echo base_url()?>assets/backend/js/jquery.min.js"></script>
+
+<!--datatables-->
+<script type="text/javascript" src="<?php echo base_url()?>assets/backend/DataTables/media/js/jquery.js"></script>
+<script type="text/javascript" src="<?php echo base_url()?>assets/backend/DataTables/media/js/jquery.dataTables.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/backend/DataTables/media/css/jquery.dataTables.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/backend/DataTables/media/css/dataTables.bootstrap.css">
+
 <!----webfonts--->
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
 <!---//webfonts--->  
@@ -34,15 +41,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="<?php echo base_url()?>assets/backend/js/d3.v3.js"></script>
 <script src="<?php echo base_url()?>assets/backend/js/rickshaw.js"></script>
 
-<!--datatables-->
-<script type="text/javascript" src="<?php echo base_url()?>assets/backend/DataTables/media/js/jquery.js"></script>
-<script type="text/javascript" src="<?php echo base_url()?>assets/backend/DataTables/media/js/jquery.dataTables.js"></script>
-<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/backend/css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/backend/DataTables/media/css/jquery.dataTables.css">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/backend/DataTables/media/css/dataTables.bootstrap.css">
 
 <!-- akhir dari Bagian js -->
 <script src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyBIE9_0cfpD3hMSL95jhdkJ3zsLbBOiFVs" type="text/javascript"></script>
+
+
           
 </head>
 <body>
@@ -110,7 +113,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw nav_icon"></i>Dashboard</a>
+                            <a href="<?php echo base_url()?>"><i class="fa fa-dashboard fa-fw nav_icon"></i>Dashboard</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-laptop nav_icon"></i>Logistik<span class="fa arrow"></span></a>
@@ -119,7 +122,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <a href="grids.html">Minta Logistik</a>
                                 </li>
                                 <li>
-                                    <a href="grids.html">Lihat Permintaan Logistik</a>
+                                    <a href="<?php echo base_url()?>admin/permintaanlogistik">Lihat Permintaan Logistik</a>
                                 </li>
                                 <li>
                                     <a href="grids.html">Data Logistik</a>
@@ -137,13 +140,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <a href="typography.html">Tambah Feedback</a>
                                 </li>
                                 <li>
-                                    <a href="typography.html">Lihat Feedback</a>
+                                    <a href="<?php echo base_url()?>admin/daftarfeedback">Lihat Feedback</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-indent nav_icon"></i><span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-indent nav_icon"></i>Latihan<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                             	<li>
                                     <a href="typography.html">Tambah Feedback</a>
@@ -176,12 +179,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    
       <!-- /#page-wrapper -->
    </div>
-    <!-- /#wrapper -->
-    <script type="text/javascript">
+   <script type="text/javascript">
 		$(document).ready(function(){
 			$('.data').DataTable();
 		});
 	</script>
+    <!-- /#wrapper -->
     <!-- Bootstrap Core JavaScript -->
     <script src="<?php echo base_url()?>assets/backend/js/bootstrap.min.js"></script>
 </body>

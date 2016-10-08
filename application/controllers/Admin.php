@@ -31,13 +31,30 @@ class Admin extends CI_Controller {
 		$this->template->load('Template','permintaanlogistik',$data);
 	}
 
+	public function kodamdetail($id)
+	{
+		$data = array(
+			'logistik' => $this->Model_utama->logistik(),
+			'kodam' => $this->Model_utama->kodamdetail($id),
+			'laporankodam' => $this->Model_utama->laporankodam($id),
+			'countlogistik' => $this->Model_utama->countlogistik($id)
+			);
+		$this->template->load('Template','permintaandetail',$data);
+	}
+
 	public function daftarfeedback()
 	{
 		$this->template->load('Template','feedback');
 	}
 
-	public function permintaandetail()
+	public function mintalogistik()
 	{
-		$this->template->load('Template','permintaandetail');
+		$this->template->load('Template','mintalogistik');
+	}
+
+	public function apitni()
+	{
+		
+		$this->template->load('Template','api');
 	}
 }
