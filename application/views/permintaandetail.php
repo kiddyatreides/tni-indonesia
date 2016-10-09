@@ -14,7 +14,7 @@
 		<ul class="collection">
 		
 								<li class="collection-item avatar email-unread">
-								  <i class="fa fa-users icon_1"></i>
+								  <i class="fa fa-anchor icon_1"></i>
 								  <div class="avatar_left">
 									<span class="email-title">Kepala Satuan</span>
 									<p class="truncate grey-text ultra-small"><?php echo $kodams->nama_pemimpin?></p>
@@ -30,7 +30,7 @@
 								  <div class="clearfix"> </div>
 								</li>
 								<li class="collection-item avatar email-unread">
-								  <i class="fa fa-tag icon_3"></i>
+								  <i class="fa fa-home icon_3"></i>
 								  <div class="avatar_left">
 									<span class="email-title">Kota</span>
 									<p class="truncate grey-text ultra-small"><?php echo $kodams->kota?></p>
@@ -38,7 +38,7 @@
 								  <div class="clearfix"> </div>
 								</li>
 								<li class="collection-item avatar email-unread">
-								  <i class="fa fa-tag icon_3"></i>
+								  <i class="fa fa-users icon_3"></i>
 								  <div class="avatar_left">
 									<span class="email-title">Jumlah Personel</span>
 									<p class="truncate grey-text ultra-small">1200</p>
@@ -46,15 +46,15 @@
 								  <div class="clearfix"> </div>
 								</li>
 								<li class="collection-item avatar email-unread">
-								  <i class="fa fa-tag icon_3"></i>
+								  <i class="fa fa-envelope icon_2"></i>
 								  <div class="avatar_left">
-									<span class="email-title">Total Pengiriman</span>
+									<span class="email-envelope">Total Pengiriman</span>
 									<p class="truncate grey-text ultra-small">3</p>
 								  </div>
 								  <div class="clearfix"> </div>
 								</li>
 								<li class="collection-item avatar email-unread">
-								  <i class="fa fa-tag icon_3"></i>
+								  <i class="fa fa-bell icon_1"></i>
 								  <div class="avatar_left">
 									<span class="email-title">Total Permintaan</span>
 									<p class="truncate grey-text ultra-small">3</p>
@@ -69,7 +69,7 @@
 	</div>
 	
 	<div class="panel-body1">
-	  <h3>Daftar Permintaan</h3>
+	  <h3>Daftar Permintaan Yang Belum Dikirim</h3>
 		<table class="table table-bordered data">
 						 <thead>
 							<tr>

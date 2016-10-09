@@ -28,6 +28,14 @@ class Model_utama extends CI_Model {
     		return $this->db->query($q);
 		}
 
+
+		public function datalogistik(){
+			$q = "select A.id_kodam,A.nama,B.datetime,B.id_fungsi,B.id_kodam,B.status,B.qty from tb_kodam A, tb_permintaan B where A.id_kodam = B.id_kodam";
+    		return $this->db->query($q);
+		}
+
+
+
 		public function inboxatas(){
 			$q = "select DISTINCT A.id_kodam,A.nama,A.lat,A.long,A.alamat,A.logo,A.nama_pemimpin,A.kota,B.id_penerima,B.id_pengirim,B.pesan,B.datetime from tb_kodam A, tb_pesan B where A.id_kodam = B.id_pengirim order by datetime limit 3";
     		return $this->db->query($q);

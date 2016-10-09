@@ -35,6 +35,15 @@ class Admin extends CI_Controller {
 		$this->template->load('Template','permintaanlogistik',$data);
 	}
 
+	public function datadistribusi()
+	{
+		$data = array(
+			'pesans' => $this->Model_utama->inboxatas(),
+			'data' => $this->Model_utama->datalogistik()
+			);
+		$this->template->load('Template','datapengiriman',$data);
+	}
+
 	public function kodamdetail($id)
 	{
 		$data = array(	'pesans' => $this->Model_utama->inboxatas(),
@@ -79,7 +88,7 @@ class Admin extends CI_Controller {
 		$data = array(
 			'pesans' => $this->Model_utama->inboxatas()
 			);
-		$this->template->load('Template','mintalogistik');
+		$this->template->load('Template','mintalogistik',$data);
 	}
 
 
@@ -97,7 +106,7 @@ class Admin extends CI_Controller {
 					$data = array(
 						'pesans' => $this->Model_utama->inboxatas()
 						);
-					$this->template->load('Template','mintalogistik');
+					$this->template->load('Template','mintalogistik',$data);
 				}
 				else{
 					echo "error";

@@ -118,10 +118,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <a href="<?php echo base_url()?>admin/permintaanlogistik">Lihat Permintaan Logistik</a>
                                 </li>
                                 <li>
-                                    <a href="grids.html">Data Logistik</a>
-                                </li>
-                                <li>
-                                    <a href="grids.html">Laporan Logistik</a>
+                                    <a href="<?php echo base_url()?>admin/datadistribusi">Data Logistik</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -130,7 +127,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <a href="#"><i class="fa fa-indent nav_icon"></i>Feedback<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                             	<li>
-                                    <a href="typography.html">Tambah Feedback</a>
+                                    <a href="<?php echo base_url()?>admin/isifeedback">Tambah Feedback</a>
                                 </li>
                                 <li>
                                     <a href="<?php echo base_url()?>admin/daftarfeedback">Lihat Feedback</a>
