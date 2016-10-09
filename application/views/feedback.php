@@ -1,48 +1,31 @@
 
 		   	 <h1> Daftar Feedback</h1>
 		   	 	<div class="online">
+		   	 	<?php foreach ($feedback->result() as $fbs) {  ?>
 					<a href="#"><div class="online-top">
 						<div class="top-at">
-							<img class="img-responsive" src="<?php echo base_url()?>assets/backend/images/2.png" alt="">
+							<img class="img-responsive" src="<?php echo base_url()?>uploads/kodam/<?php echo $fbs->logo?>" style="width: 150px; height: 150px;" alt="">
 						</div>
 						<div class="top-on">
 							<div class="top-on1">
-								<p>Kodim Jakarta</p>
-								<span>Senjata yang kemarin dikirim rusak 3 pieces</span>
+								<p><?php echo $fbs->nama?></p>
+								<span><?php echo $fbs->judul?></span>
+								<span><?php echo $fbs->isi?></span>
 								<br>
 								<br>
-								<?php $today = date("F j, Y, g:i a");              
-								{ ?> 
-								<font><?php echo $today?></font>
-								<?php } ?>
+								<font><?php echo format_hari_tanggal1($fbs->datetime)?></font>
 							</div>
 							<div class="clearfix"> </div>
-							<br>
-							<span class="label label-danger">Buruk</span>
+							<br> <?php if($fbs->status == 1) { ?>
+								  	<span class="label label-danger">Buruk</span>
+								  <?php } ?>
+								  <?php if($fbs->status == 2) { ?>
+								  	<span class="label label-success">Baik</span>
+								  <?php } ?>
+								  
 						</div>
 						<div class="clearfix"> </div>
 					</div></a>
-					<a href="#"><div class="online-top">
-						<div class="top-at">
-							<img class="img-responsive" src="<?php echo base_url()?>assets/backend/images/3.png" alt="">
-						</div>
-						<div class="top-on">
-							<div class="top-on1">
-								<p>Kodim Bogor</p>
-								<span>Senjata yang dikirim minggu lalu sudah diterima dengan baik</span>
-								<br>
-								<br>
-								<?php $today = date("F j, Y, g:i a");              
-								{ ?> 
-								<font><?php echo $today?></font>
-								<?php } ?>
-							</div>
-							
-							<div class="clearfix"> </div>
-							<br>
-							<span class="label label-success">Baik</span>
-						</div>
-						<div class="clearfix"> </div>
-					</div></a>
+					<?php } ?>
 				</div>
 		   	 

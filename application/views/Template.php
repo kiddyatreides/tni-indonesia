@@ -64,42 +64,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <!-- /.navbar-header -->
             <ul class="nav navbar-nav navbar-right">
 				<li class="dropdown">
-	        		<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-comments-o"></i><span class="badge">4</span></a>
+	        		<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-comments-o"></i><span class="badge">2</span></a>
 	        		<ul class="dropdown-menu">
 						<li class="dropdown-menu-header">
 							<strong>Messages</strong>
 						</li>
+						<?php foreach ($pesans->result() as $ps2) { ?>
 						<li class="avatar">
-							<a href="#">
-								<img src="<?php echo base_url()?>assets/backend/images/1.png" alt=""/>
-								<div>New message</div>
-								<small>1 minute ago</small>
-								<span class="label label-info">NEW</span>
+							<a href="<?php echo base_url()?>admin/pesanmasuk">
+								<img src="<?php echo base_url()?>uploads/kodam/<?php echo $ps2->logo?>" alt=""/>
+								<div><?php echo substr($ps2->pesan, 0,20)?>[....]</div>
+								<small><?php echo $ps2->datetime?></small>
+								<span class="label label-info">Baru</span>
 							</a>
 						</li>
-						<li class="avatar">
-							<a href="#">
-								<img src="<?php echo base_url()?>assets/backend/images/2.png" alt=""/>
-								<div>New message</div>
-								<small>1 minute ago</small>
-								<span class="label label-info">NEW</span>
-							</a>
-						</li>
-						
+						<?php } ?>
 						<li class="dropdown-menu-footer text-center">
-							<a href="#">View all messages</a>
+							<a href="<?php echo base_url()?>admin/pesanmasuk">Lihat semua pesan</a>
 						</li>	
 	        		</ul>
 	      		</li>
 			    <li class="dropdown">
-	        		<a href="#" class="dropdown-toggle avatar" data-toggle="dropdown"><img src="<?php echo base_url()?>assets/backend/images/1.png"><span class="badge">9</span></a>
+	        		<a href="#" class="dropdown-toggle avatar" data-toggle="dropdown"><img src="<?php echo base_url()?>uploads/kodam/tniad.png"><span class="badge">6 </span></a>
 	        		<ul class="dropdown-menu">
 						<li class="dropdown-menu-header text-center">
 							<strong>Account</strong>
 						</li>
-						<li class="m_2"><a href="#"><i class="fa fa-bell-o"></i> Demands <span class="label label-info">42</span></a></li>
-						<li class="m_2"><a href="#"><i class="fa fa-envelope-o"></i> Messages <span class="label label-success">42</span></a></li>
-						<li><a href="#"><i class="fa fa-comments"></i> Feedbacks <span class="label label-warning">42</span></a></li>
+						<li class="m_2"><a href="<?php echo base_url()?>admin/mintalogistik"><i class="fa fa-bell-o"></i> Permintaan <span class="label label-info">2</span></a></li>
+						<li class="m_2"><a href="<?php echo base_url()?>admin/pesanmasuk"><i class="fa fa-envelope-o"></i> Pesan <span class="label label-success">1</span></a></li>
+						<li><a href="<?php echo base_url()?>admin/daftarfeedback"><i class="fa fa-comments"></i> Umpan Balik <span class="label label-warning">3</span></a></li>
 						<li class="dropdown-menu-header text-center">
 							<strong>Settings</strong>
 						</li>
@@ -119,7 +112,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <a href="#"><i class="fa fa-laptop nav_icon"></i>Logistik<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="grids.html">Minta Logistik</a>
+                                    <a href="<?php echo base_url()?>admin/mintalogistik">Minta Logistik</a>
                                 </li>
                                 <li>
                                     <a href="<?php echo base_url()?>admin/permintaanlogistik">Lihat Permintaan Logistik</a>
@@ -141,18 +134,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </li>
                                 <li>
                                     <a href="<?php echo base_url()?>admin/daftarfeedback">Lihat Feedback</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-indent nav_icon"></i>Latihan<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                            	<li>
-                                    <a href="typography.html">Tambah Feedback</a>
-                                </li>
-                                <li>
-                                    <a href="typography.html">Lihat Feedback</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->

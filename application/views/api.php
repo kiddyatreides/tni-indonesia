@@ -39,7 +39,7 @@
 	<?php
 				foreach ($data2->Fungsilogistik as $value) {
 				?>
-							<option><?php echo $value->namaFungsi ?></option>
+							<option value=""><?php echo $value->namaFungsi ?></option>
 
 			<?php } ?>
 </select>

@@ -74,7 +74,6 @@
 						 <thead>
 							<tr>
 							  <th>No. </th>
-							  <th>Jenis Permintaan</th>
 							  <th>Nama Barang</th>
 							  <th>Jumlah</th>
 							  <th>Tanggal & waktu</th>
@@ -83,13 +82,14 @@
 						  </thead>
 						  
 						  <tbody>
-						  <?php $no = 1; foreach ($laporankodam->result() as $lapors) { ?>
+						  <?php $no = 1; foreach ($laporankodam->result() as $lapors)
+						   { ?>
+
 							<tr>
 							  <th scope="row"><?php echo $no?></th>
-							  <td><?php echo $lapors->datetime?></td>
-							  <td><?php echo $lapors->status?></td>
-							  <td>12</td>
-							  <td>Sabtu, 12 Oktober 2016</td>
+							  <td><?php echo $lapors->id_fungsi?></td>
+							  <td><?php echo $lapors->qty?></td>
+							  <td><?php echo format_hari_tanggal1($lapors->datetime)?></td>
 							  <td><i class="lnr lnr-power-switch"><a href="#"> Kirim Barang</a></i></td>
 							</tr>
 							<?php $no++; } ?>
@@ -102,7 +102,6 @@
 						<thead>
 							<tr>
 							  <th>No. </th>
-							  <th>Jenis Permintaan</th>
 							  <th>Nama Barang</th>
 							  <th>Jumlah</th>
 							  <th>Tanggal & Waktu</th>
@@ -110,30 +109,26 @@
 							</tr>
 						  </thead>
 						  <tbody>
+						  <?php $no = 1; foreach ($laporankodam2->result() as $lapors2)
+						   { ?>
 							<tr>
-							  <th scope="row">1</th>
-							  <td>Fungsi</td>
-							  <td>Tank APC</td>
-							  <td>12</td>
-							  <td>Sabtu, 12 Oktober 2016</td>
-							  <td><span class="label label-success">Sukses</span></td>
+							  <th scope="row"><?php echo $no?></th>
+							  <td><?php echo $lapors2->id_fungsi?></td>
+							  <td><?php echo $lapors2->qty?></td>
+							  <td><?php echo format_hari_tanggal1($lapors->datetime)?></td>
+							  <td>
+								  <?php if($lapors2->status == 1) { ?>
+								  	<span class="label label-danger">Pending</span>
+								  <?php } ?>
+								  <?php if($lapors2->status == 2) { ?>
+								  	<span class="label label-warning">Dalam Perjalanan</span>
+								  <?php } ?>
+								  <?php if($lapors2->status == 3) { ?>
+								  	<span class="label label-success">Sukses</span>
+								  <?php } ?>	
+							  </td>
 							</tr>
-							<tr>
-							  <th scope="row">2</th>
-							  <td>Fungsi</td>
-							  <td>Tank APC</td>
-							  <td>12</td>
-							  <td>Sabtu, 12 Oktober 2016</td>
-							  <td><span class="label label-danger">Gagal</span></td>
-							</tr>
-							<tr>
-							  <th scope="row">3</th>
-							  <td>Fungsi</td>
-							  <td>Tank APC</td>
-							  <td>12</td>
-							  <td>Sabtu, 12 Oktober 2016</td>
-							  <td><span class="label label-warning">Dalam Pengiriman</span></td>
-							</tr>
+							<?php $no++; } ?>
 						  </tbody>
 						</table>
 	</div>

@@ -20,12 +20,16 @@ class Admin extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->template->load('Template','index');
+		$data = array(
+			'pesans' => $this->Model_utama->inboxatas()
+		);
+		$this->template->load('Template','index',$data);
 	}
 
 	public function permintaanlogistik()
 	{
 		$data = array(
+			'pesans' => $this->Model_utama->inboxatas(),
 			'logistik' => $this->Model_utama->logistik()
 			);
 		$this->template->load('Template','permintaanlogistik',$data);
@@ -33,28 +37,76 @@ class Admin extends CI_Controller {
 
 	public function kodamdetail($id)
 	{
-		$data = array(
-			'logistik' => $this->Model_utama->logistik(),
-			'kodam' => $this->Model_utama->kodamdetail($id),
-			'laporankodam' => $this->Model_utama->laporankodam($id),
-			'countlogistik' => $this->Model_utama->countlogistik($id)
+		$data = array(	'pesans' => $this->Model_utama->inboxatas(),
+						'logistik' => $this->Model_utama->logistik(),
+						'kodam' => $this->Model_utama->kodamdetail($id),
+						'laporankodam' => $this->Model_utama->laporankodam($id),
+						'laporankodam2' => $this->Model_utama->laporankodam2($id),
+						'countlogistik' => $this->Model_utama->countlogistik($id)
 			);
 		$this->template->load('Template','permintaandetail',$data);
 	}
 
 	public function daftarfeedback()
 	{
-		$this->template->load('Template','feedback');
+		$data = array(
+			'pesans' => $this->Model_utama->inboxatas(),
+			'feedback' => $this->Model_utama->feedback()
+			);
+		$this->template->load('Template','feedback', $data);
+	}
+
+	public function isifeedback()
+	{
+		$data = array(
+			'pesans' => $this->Model_utama->inboxatas(),
+			'feedback' => $this->Model_utama->feedback()
+			);
+		$this->template->load('Template','isifeedback', $data);
+	}
+
+	public function pesanmasuk()
+	{
+		$data = array(
+			'pesans' => $this->Model_utama->inboxatas(),
+			'pesan' => $this->Model_utama->inbox()
+		);
+		$this->template->load('Template','inbox',$data);
 	}
 
 	public function mintalogistik()
 	{
+		$data = array(
+			'pesans' => $this->Model_utama->inboxatas()
+			);
 		$this->template->load('Template','mintalogistik');
+	}
+
+
+	public function mintalogistikprocess()
+	{
+		$this->load->helper(array('form', 'url'));
+		$this->load->library('form_validation');
+		
+				$id_fungsi = $this->input->post("idfungsi");
+				$qty = $this->input->post("qty");
+
+				$q = $this->Model_utama->addMintaLogistik($id_fungsi,$qty);
+				if($q!=0)
+				{	
+					$data = array(
+						'pesans' => $this->Model_utama->inboxatas()
+						);
+					$this->template->load('Template','mintalogistik');
+				}
+				else{
+					echo "error";
+				}
 	}
 
 	public function apitni()
 	{
-		
+
 		$this->template->load('Template','api');
 	}
 }
